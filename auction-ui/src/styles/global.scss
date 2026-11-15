@@ -1,0 +1,256 @@
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #282a27;
+  background: #f6f4ef;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --bg: #f6f4ef;
+  --paper: #fbfaf7;
+  --ink: #282a27;
+  --muted: #85877f;
+  --line: #deddd6;
+  --accent: #b65339;
+  --accent-ink: #fff;
+  --soft: #ebe9e1;
+  --serif: 'Playfair Display', Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.65px;
+  color: var(--muted);
+}
+
+.eyebrow-line {
+  height: 1px;
+  width: 22px;
+  background: var(--accent);
+  display: inline-block;
+}
+
+.avatar-stack {
+  display: flex;
+  padding-left: 3px;
+}
+
+.avatar-stack span {
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
+  margin-left: -4px;
+  border: 2px solid var(--bg);
+  background: #c5aa93;
+  color: #fff;
+  font-size: 9px;
+  display: grid;
+  place-items: center;
+}
+
+.avatar-stack span:nth-child(2) {
+  background: #75827b;
+}
+
+.avatar-stack span:nth-child(3) {
+  background: #bb806d;
+}
+
+.avatar-stack span:nth-child(4) {
+  background: #e4dfd4;
+  color: var(--ink);
+}
+
+.art-caption {
+  position: absolute;
+  z-index: 2;
+  left: -37px;
+  bottom: 52px;
+  background: var(--paper);
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 8px 30px #282a2710;
+}
+
+.art-caption span,
+.art-index,
+.vertical-note {
+  font-size: 8px;
+  letter-spacing: 1.7px;
+  color: var(--muted);
+}
+
+.art-caption b {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.art-index {
+  position: absolute;
+  right: -22px;
+  bottom: 4px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.art-index i {
+  height: 1px;
+  background: var(--accent);
+  width: 24px;
+}
+
+.vertical-note {
+  position: absolute;
+  z-index: 2;
+  right: -28px;
+  top: 42px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+footer {
+  max-width: 1440px;
+  margin: auto;
+  padding: 25px 9.8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+footer .brand {
+  color: var(--ink);
+  font-size: 16px;
+}
+
+footer .brand-mark {
+  height: 26px;
+  width: 26px;
+  font-size: 18px;
+}
+
+.place-bid {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px;
+  background: var(--accent);
+  color: white;
+  border: 0;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.place-bid:hover {
+  filter: brightness(0.92);
+}
+
+.place-bid svg {
+  height: 15px;
+  width: 15px;
+}
+
+/* After Hours: a high-contrast collector's gallery. */
+
+:root[data-theme='gallery'] {
+  --bg: #202326;
+  --paper: #292d30;
+  --ink: #ece9e1;
+  --muted: #a4a6a2;
+  --line: #424649;
+  --accent: #d4aa5d;
+  --accent-ink: #25282a;
+  --soft: #35393b;
+}
+
+[data-theme='gallery'] .avatar-stack span {
+  border-color: var(--bg);
+}
+
+/* Open House: crisp, airy, and architectural. */
+
+:root[data-theme='modern'] {
+  --bg: #edf2f0;
+  --paper: #fbfdfc;
+  --ink: #1f3435;
+  --muted: #738482;
+  --line: #d3dfdc;
+  --accent: #287578;
+  --accent-ink: #fff;
+  --soft: #dfe8e5;
+}
+
+@media (max-width: 700px) {
+  .art-caption {
+    left: -14px;
+    bottom: 34px;
+    padding: 14px 17px;
+  }
+
+  .art-caption b {
+    font-size: 16px;
+  }
+
+  .vertical-note {
+    right: -18px;
+  }
+
+  footer {
+    padding: 22px 6%;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  footer > span:nth-child(2) {
+    display: none;
+  }
+}

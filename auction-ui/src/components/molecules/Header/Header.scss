@@ -1,0 +1,164 @@
+.topbar {
+  height: 78px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  position: relative;
+  z-index: 4;
+}
+
+.topbar-inner {
+  height: 100%;
+  max-width: 1440px;
+  padding: 0 7.1%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 21px;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+
+.brand-mark {
+  height: 32px;
+  width: 32px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-size: 23px;
+  line-height: 1;
+  font-style: italic;
+}
+
+.brand-dot {
+  color: var(--accent);
+}
+
+.main-nav {
+  display: flex;
+  gap: 38px;
+  margin-left: 75px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.main-nav a:hover,
+.sign-in:hover {
+  color: var(--accent);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.icon-button {
+  border: 0;
+  background: none;
+  padding: 7px;
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.sign-in {
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sell-button,
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--ink);
+  color: #fff;
+  border: 0;
+  padding: 13px 18px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sell-button:hover,
+.hero-cta:hover {
+  background: var(--accent);
+}
+
+.sell-button svg,
+.hero-cta svg {
+  width: 15px;
+  height: 15px;
+}
+
+footer .brand {
+  color: var(--ink);
+  font-size: 16px;
+}
+
+footer .brand-mark {
+  height: 26px;
+  width: 26px;
+  font-size: 18px;
+}
+
+[data-theme='gallery'] .brand-mark {
+  color: #25282a;
+}
+
+[data-theme='modern'] .hero-cta,
+[data-theme='modern'] .sell-button {
+  border-radius: 4px;
+}
+
+@media (max-width: 1000px) {
+  .topbar-inner {
+    padding: 0 5%;
+  }
+
+  .main-nav {
+    margin-left: 0;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    height: 65px;
+  }
+
+  .topbar-inner {
+    padding: 0 5%;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .favorite-head,
+  .sign-in {
+    display: none;
+  }
+
+  .sell-button {
+    padding: 11px 12px;
+    font-size: 10px;
+  }
+}

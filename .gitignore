@@ -2,6 +2,12 @@
 __pycache__/
 *.py[codz]
 *$py.class
+/ref
+/workshop
+.agents
+.vscode
+AGENTS.md
+skills-lock.json
 
 # C extensions
 *.so
